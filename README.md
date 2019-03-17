@@ -1,4 +1,4 @@
-# ArcadeGame2
+# Bugger Game #
 
 ***How to Play***
 Bugger Game ---This project, titled "Bugger Game", is a Front End Development project that challenges the participant to select a player character, and have player character reach the water without colliding without any bugs.  
