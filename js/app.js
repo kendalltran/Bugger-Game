@@ -349,3 +349,15 @@ window.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 }, false);
+
+//making this comment per danny:
+
+// Btw, this is the exact workflow that is used to push production code
+
+// 1) create branch and write code
+// 2) add and make commit locallt
+// 3) push branch to GitHub
+// 4) make a pull request (PR) to merge that branch into master
+// 5) have someone review it
+// 6) make changes based on reviewer comments
+// 7) merge to master
