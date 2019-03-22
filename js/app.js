@@ -80,6 +80,7 @@ const decreaseLife = function () {
 }
 
 //Helper function to give options to Player after game over
+/* Notes for Kendall - Did you write this? Nice use of promises if so! =) */
 const gameRestartOption = function () {
   swal(`You scored ${score} points with a long streak of ${longStreak}!`, {
   buttons: {
@@ -104,6 +105,11 @@ const gameRestartOption = function () {
 }
 
 //Helper function to render the heart counters
+/* Notes for Kendall - This function has redundant code. How can you better write this? 
+    1) This function wouldn't scale if you had more than 4 conditions. How can you make it scalable?
+    2) Think about the variables you are updating here - heart1, heart2, and heart3
+    3) For your first if condition and your last, you are updating them with the same values
+*/
 const drawHearts = function(num) {
   if (num >= 3) {
     heart1.classList.remove('far');
@@ -160,6 +166,10 @@ Heart.prototype.render = function() {
     }
 }
 
+/* Notes for Kendall -
+  Your if condition here is long and you write it more than once (see line 197). 
+  Maybe you can make this into a helper function that returns a boolean. (I.e. if(function(x, y) === True)
+*/
 Heart.prototype.update = function (dt) {
   if (player.x < this.x + 50 &&
       player.x > this.x - 50 &&
@@ -349,6 +359,21 @@ window.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 }, false);
+
+/*
+  Notes for Kendall -
+    You seem to update the values of x and y a lot. 
+    From a readability and cleanliness perspective, I would suggest creating one or two simple helper functions
+    called 'updateXPosition' and 'updateYCoordinate' and pass in the amount you want to update by. 
+    This is cleaner and easier to read in my opinion, and recommended since you update these variables quite often.
+    
+    For the function name, instead of calling it 'updateXCoordinate' or 'updateYCoordinate', you could also name it whatever
+    X and Y represent in the game, but thats not necessary.
+*/
+
+/*
+  Overall, amazing job dude!! I'm seeing awesome progress from you and you're killing it =)
+*/
 
 //making this comment per danny:
 
